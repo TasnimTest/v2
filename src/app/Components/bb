@@ -1,0 +1,44 @@
+/*
+
+  skills: EmployeeSkill[] = [];
+  userId: number = 1;
+
+  constructor(private skillService: EmployeeSkillService) {}
+
+  ngOnInit(): void {
+    Chart.register(...registerables); // Register Chart.js controllers
+
+    this.skillService.getAllUserSkills(this.userId).subscribe(skills => {
+      this.skills = skills;
+      this.renderRadarChart();
+    });
+  }
+
+  renderRadarChart(): void {
+    const canvas = document.getElementById('radarChart') as HTMLCanvasElement;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      console.error('Unable to get 2D context for canvas.');
+      return;
+    }
+
+    const radarChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: this.skills.map(skill => skill.nom_compétence),
+        datasets: [{
+          label: 'Skill Proficiency',
+          data: this.skills.map(skill => skill.niveau),
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+          pointBorderColor: 'rgba(255, 99, 132, 1)',
+          pointBorderWidth: 1
+        }]
+      },
+      options: {
+      
+      }
+    });
+  }
+}*/
