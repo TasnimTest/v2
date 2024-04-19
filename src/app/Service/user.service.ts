@@ -50,4 +50,8 @@ export class UserService {
     return this.http.put(`${this.baseUrl}/${username}/password`, { oldPassword, newPassword }, { headers });
   }
 
+  getEmployees(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/employees`);
+  }
+
 }

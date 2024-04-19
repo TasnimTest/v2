@@ -14,12 +14,14 @@ export class EmployeeSkillService {
   getAllUserSkills(userId: number): Observable<EmployeeSkill[]> {
     return this.http.get<EmployeeSkill[]>(`${this.baseUrls}/${userId}/skills`);
   }
+  
   addUserSkill(userId: number, skillId: number, competence: EmployeeSkill): Observable<EmployeeSkill> {
     return this.http.post<EmployeeSkill>(`http://localhost:8080/api/user/${userId}/skill/${skillId}`,competence );
   }
-    getAllSkill (): Observable<EmployeeSkill[]>{
-      return this.http.get<EmployeeSkill[]> (`http://localhost:8080/api/skill`);
-    }
+
+  getAllSkill (): Observable<EmployeeSkill[]>{
+    return this.http.get<EmployeeSkill[]> (`http://localhost:8080/api/skill`);
+  }
 
   deleteUserSkill(userId: number, skillId: number): Observable<string> {
     return this.http.delete<string>(`${this.baseUrls}/${userId}/skill/${skillId}`);

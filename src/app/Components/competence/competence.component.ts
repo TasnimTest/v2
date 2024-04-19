@@ -1,6 +1,6 @@
 import { Component, Inject, Input, OnInit, inject } from '@angular/core';
 import { EmployeeSkill } from '../../Model/employee-skill.module';
-import {CommonModule} from "@angular/common";
+import { CommonModule} from "@angular/common";
 import { EmployeeSkillService } from '../../Service/employee-skill.service';
 import { AuthService } from '../../Service/auth.service';
 import { UserService } from '../../Service/user.service';

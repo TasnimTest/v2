@@ -185,6 +185,12 @@ export class AuthService {
   };
 
 
+  // Méthode pour récupérer les informations du manager (y compris le département)
+  getManagerInfo(): Observable<any> {
+    // Faites une requête HTTP pour récupérer les informations du manager depuis votre backend
+    return this.http.get<any>('http://localhost:8080/user/manager');
+  }
+
   }
 
 

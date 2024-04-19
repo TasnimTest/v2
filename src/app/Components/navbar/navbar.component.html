@@ -71,16 +71,29 @@
             <li>
               <a  href="/competence">Les Compétences</a>
             </li>
+             <!-- Rubriques pour l'employés -->
+          <ng-container *ngIf="userRole === 'Employé'">
             <li>
               <a href="/dashboard">Dashboard</a>
             </li>
+          </ng-container>
           <!-- Rubriques pour le manager -->
           <ng-container *ngIf="userRole === 'Manager'">
-            <li><a href="/src/app/Components/equipe">Equipe</a></li>
+            <li>
+              <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+              <a href="../equipe">Equipe</a>
+            </li>
           </ng-container>
           <!-- Rubriques pour l'administrateur -->
           <ng-container *ngIf="userRole === 'Admin'">
-            <li><a routerLink="/administrateur">Administration</a></li>
+            <li>
+              <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+              <a routerLink="/administrateur">Administration</a>
+            </li>
           </ng-container>
         </ul>
       </div>

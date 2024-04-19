@@ -1,0 +1,34 @@
+/* Style du cadre du bouton */
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #333; /* Bordure autour du bouton */
+    border-radius: 4px; /* Coins arrondis */
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
+    transition: all 0.3s ease; /* Transition pour un effet fluide */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 45vh; /* Hauteur de la fenêtre */
+}
+  
+  /* Style pour quand le bouton est survolé */
+.button:hover {
+    background-color: #e0e0e0;
+    border-color: #555; /* Changement de couleur de la bordure */
+}
+  
+  /* Style pour quand le bouton est cliqué */
+.button:active {
+    background-color: #d0d0d0;
+    border-color: #777; /* Changement de couleur de la bordure */
+    box-shadow: none; /* Suppression de l'ombre lorsqu'il est cliqué */
+}
+  
